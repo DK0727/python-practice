@@ -1,4 +1,5 @@
 import re
+import sys
 # if __name__ == '__main__':
 #     with open('sample.txt','r',encoding='utf-8') as f:
 #         content = f.read()
@@ -48,6 +49,10 @@ def count_words(input_file,output_file):
             f.write(f"{word} {count}\n")
 
 if __name__ == '__main__':
-    count_words('sample.txt','result.txt')
-
+    if len(sys.argv) !=3:
+        print('使用方法：python word_count_tool.py <输入文件> <输出文件>')
+        sys.exit(1)
+    input_file = sys.argv[1]
+    output_file = sys.argv[2]
+    count_words(input_file,output_file)
 
