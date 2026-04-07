@@ -50,7 +50,7 @@ def count_words(input_file,output_file):
 
 if __name__ == '__main__':
     if len(sys.argv) !=3:
-        print('使用方法：python word_count_tool.py <输入文件> <输出文件>')
+        print('使用方法：python word_count.py <输入文件> <输出文件>')
         sys.exit(1)
     input_file = sys.argv[1]
     output_file = sys.argv[2]
