@@ -2,7 +2,6 @@ import requests
 from bs4 import BeautifulSoup
 headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
-    'Cookie': 'll="108088"; bid=6lrIBt594UU; __utma=30149280.264203687.1773230244.1773230244.1773230244.1; __utmz=30149280.1773230244.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); dbcl2="294554301:WrtT/89R3Tk"; ck=Pumh; _pk_ref.100001.4cf6=%5B%22%22%2C%22%22%2C1775560471%2C%22https%3A%2F%2Faccounts.douban.com%2F%22%5D; _pk_id.100001.4cf6=fa4fc2b54939d485.1775560471.; _pk_ses.100001.4cf6=1; push_noty_num=0; push_doumail_num=0; __yadk_uid=cZRwwwJLQECFBFcvpFfLgZtLbrBZleP9'
 }
 all_title=[]
 
