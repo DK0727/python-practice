@@ -4,7 +4,6 @@ headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
 }
 all_title=[]
-
 for page in range(10):
     start = page*25
     url = f'http://movie.douban.com/top250?start={start}'
@@ -18,6 +17,5 @@ for page in range(10):
             print(title.text)
     print(f'第{page}页加载完成，当前一共{start}条')
 print('\n=====全部电影=====')
-
 for i ,title in enumerate(all_title,1):
     print(f'{i},{title}')
