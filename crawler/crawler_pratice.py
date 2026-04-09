@@ -28,7 +28,7 @@ def fetch(url,retry=3):
 def parse(html):
     soup = BeautifulSoup(html,'html.parser')
     titles = []
-    # print('找到title数量:',len(soup.find_all('span',class_='title')))
+    print('找到title数量:',len(soup.find_all('span',class_='title')))
     for item in soup.find_all('span',class_='title'):
         # print('原始文本',item.text)
         if '/' not in item.text:
