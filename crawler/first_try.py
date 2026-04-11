@@ -3,7 +3,7 @@
 import requests
 from bs4 import BeautifulSoup
 import random
-
+import csv
 url='http://movie.douban.com/top250'
 
 USER_AGENT = [
@@ -17,9 +17,15 @@ headers={
 r=requests.get(url,headers=headers)
 soup=BeautifulSoup(r.text,'html.parser')
 titles=soup.find_all('span',class_='title')
-for t in titles:
-    if '/' not in t.text:
-        print(t.text)
+
+
+with open('douban_top250.csv','w',newline='',encoding='utf-8-sig') as f:
+    writer = csv.writer(f)
+    writer.writerow(['排名','电影名称'])
+    for i,t in enumerate(titles,1):
+        if '/' not in t.text:
+            writer.writerow([i,t.text])
+print('保存完成')
 
 
 
